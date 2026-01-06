@@ -1,0 +1,17 @@
+{
+  "name": "@instago/diff",
+  "version": "1.0.1",
+  "description": "Module diff",
+  "main": "index.js",
+  "type": "commonjs",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "instago",
+    "diff"
+  ],
+  "files": [
+    "index.js",
+    "ReadMe.MD",
+    "LICENSE"
+  ]
+}

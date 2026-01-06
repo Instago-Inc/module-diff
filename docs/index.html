@@ -59,13 +59,13 @@
   <body>
     <main>
       <h1>module/diff - V8 module</h1>
-      <p class="intro">Get a quick, structured view of what changed between two values without pulling in heavy tooling. This module focuses on clarity and compact output so you can use diffs in logs, workflow decisions, or light auditing.</p>
+      <p class="intro">Use this module when you want a simple way to compare values and see what changed. It keeps output small and structured so it&#x27;s easy to scan, log, or pass to downstream steps.</p>
       <p class="muted">Learn more at <a href="https://instago.ai" target="_blank" rel="noopener">https://instago.ai</a>.</p>
       <div class="section">
         <h2>Technical reference</h2>
         <h1>module/diff - V8 module</h1>
-<p>Get a quick, structured view of what changed between two values without pulling in heavy tooling. This module focuses on clarity and compact output so you can use diffs in logs, workflow decisions, or light auditing.</p>
-<p>It is built for the hgi-v8 runtime and works without Node.js dependencies. Learn more at https://instago.ai.</p>
+<p>Use this module when you want a simple way to compare values and see what changed. It keeps output small and structured so it&#x27;s easy to scan, log, or pass to downstream steps.</p>
+<p>It runs in the hgi-v8 runtime without Node.js dependencies. Learn more at https://instago.ai.</p>
 <h2>Technical reference</h2>
 <p>Exports:</p>
 <ul>
@@ -79,7 +79,7 @@
 <li>Arrays return <code>{ type: &#x27;array&#x27;, removed?, added?, changed? }</code> or <code>null</code>.</li>
 <li>Objects return <code>{ type: &#x27;object&#x27;, changes }</code> or <code>null</code>.</li>
 <li>Primitives return <code>{ before, after }</code> or <code>null</code>.</li>
-<li><code>applyTextDiff(textDiff)</code> returns only added lines from a text diff, or <code>null</code> for invalid input.</li>
+<li><code>applyTextDiff(textDiff)</code> returns only text diff lines where <code>before</code> is falsy and <code>after</code> is truthy, or <code>null</code> for invalid input.</li>
 </ul>
 <p>Configuration:</p>
 <ul>
@@ -100,7 +100,15 @@ const objDelta = diff({ a: 1 }, { a: 2, b: 3 });
 // =&gt; { type: &#x27;object&#x27;, changes: { a: { before: 1, after: 2 }, b: { added: 3 } } }
 </code></pre>
       </div>
-      
+      <div class="section">
+  <h2>Changelog</h2>
+  <h2>v1.0.1 - Metadata Refresh for Diff Module</h2>
+<p>Maintenance release updating package metadata and the changelog for the diff module, with keywords to aid discovery.</p>
+<h3>Changed</h3>
+<ul>
+<li>Update package version and changelog for the diff module release.</li>
+</ul>
+</div>
     </main>
   </body>
 </html>

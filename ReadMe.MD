@@ -1,8 +1,8 @@
 # module/diff - V8 module
 
-Get a quick, structured view of what changed between two values without pulling in heavy tooling. This module focuses on clarity and compact output so you can use diffs in logs, workflow decisions, or light auditing.
+Use this module when you want a simple way to compare values and see what changed. It keeps output small and structured so it's easy to scan, log, or pass to downstream steps.
 
-It is built for the hgi-v8 runtime and works without Node.js dependencies. Learn more at https://instago.ai.
+It runs in the hgi-v8 runtime without Node.js dependencies. Learn more at https://instago.ai.
 
 ## Technical reference
 
@@ -16,7 +16,7 @@ Usage:
   - Arrays return `{ type: 'array', removed?, added?, changed? }` or `null`.
   - Objects return `{ type: 'object', changes }` or `null`.
   - Primitives return `{ before, after }` or `null`.
-- `applyTextDiff(textDiff)` returns only added lines from a text diff, or `null` for invalid input.
+- `applyTextDiff(textDiff)` returns only text diff lines where `before` is falsy and `after` is truthy, or `null` for invalid input.
 
 Configuration:
 - No required or optional env keys in `env.json`.

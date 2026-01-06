@@ -1,6 +1,6 @@
 {
   "name": "@instago/diff",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Module diff",
   "main": "index.js",
   "type": "commonjs",
